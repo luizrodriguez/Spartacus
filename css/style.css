@@ -1,0 +1,139 @@
+body{
+	background-image:url(../images/bg.jpg);
+	background-position:top
+    }
+#contenedor{
+	margin:auto;
+	width:1000px;
+	margin-top:100px;
+	z-index:1 ;
+    overflow: hidden;
+    position: relative;
+	height: 763px;
+	}
+#personajes{
+	width:3500px;
+	background-image:url(../images/coliseo.png) ; 
+	float: left;
+    height: 763px;
+    position: absolute;
+	
+	}
+#contenedor div.sangre{
+	width:0px; 
+	height:300px;
+	background-image:url(../images/blood.png);
+	float:left;
+}
+#contenedor div.personaje{
+	width:200px; 
+	height:300px;
+	float:left; 
+	margin:15px; 
+	/*border-radius:10px 10px 0px 0px;*/
+	box-shadow:3px 5px 5px #ccc;
+	border:10px solid  #fff;
+	border-bottom:50px solid  #fff;
+	opacity:0.4;
+	filter:alpha(opacity=40); 
+	transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	}
+#contenedor div.personaje:hover{
+	opacity:1;
+	filter:alpha(opacity=100);  
+	transform:scale(1.1);
+	-webkit-transform:scale(1.1);
+	border-bottom:10px solid  #fff; 
+	background-image:url(../images/blood.png);
+	background-repeat: no-repeat;
+	animation:mymove 5s; 
+	-webkit-animation:mymove 5s;
+	
+	}
+@keyframes mymove
+{
+0%   { background-position: center -450px;}
+25%  { background-position: center -300px;}
+50%  { background-position: center -200px;}
+75%  { background-position: center -100px;}
+80%  { background-position: center -50px}
+90%  { background-position: center -25px}
+100% { background-position: center 0px}
+}
+
+@-webkit-keyframes mymove
+{
+0%   { background-position: center -450px;}
+25%  { background-position: center -300px;}
+50%  { background-position: center -200px;}
+75%  { background-position: center -100px;}
+80%  { background-position: center -50px}
+90%  { background-position: center -25px}
+100% { background-position: center 0px}
+}
+
+ 
+
+#oscuro{
+	width:1000px; height:770px; 
+	z-index:5; 
+	background-image:url(../images/oscuro-cine.png); 
+	position:absolute; 
+	display: none
+	}
+ 
+#video {
+	position:absolute;
+	left:1281px;
+	top:102px;
+	width:454px;
+	height:281px;
+	z-index:6;
+	background-color: #000;
+}
+.personaje{
+	cursor:pointer}
+div.personaje > div{
+	width:200px; 
+	height:300px;
+	float:left; 
+}
+.text_personajes{
+	text-align:center;
+	font-size:20px;
+	color:#FFF;
+	text-shadow: 3px 3px 3px #000;
+	font-family: Arial, Helvetica, sans-serif;
+	 
+	}
+.spartacus{
+	background-image:url(../images/spartacus.png);
+	background-size:200px auto;
+	}
+.doctore{
+	background-image:url(../images/doctore.png);
+	background-size:200px auto;}
+.lucretia{
+	background-image:url(../images/lucretia.png);
+	background-size:200px auto;}
+.batiatus{
+	background-image:url(../images/batiatus.png);
+	background-size:200px auto;}
+.btn_volver{
+	position: absolute;
+	width: 151px;
+	height: 37px;
+	left: 1805px;
+	top: 701px;
+	z-index: 20;
+	text-align: center;
+	background: #830604;
+	border-radius: 3px 3px 3px 3px
+	}
+.btn_volver a {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:20px;
+	color:#fff;
+	text-shadow: 3px 3px 3px #000
+	}

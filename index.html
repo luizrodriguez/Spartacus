@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Spartacus</title>
+</head>
+<link  type="text/css" href="css/style.css" rel="stylesheet" />
+<script src="js/prefixfree.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+<script>
+$(document).ready(function(){
+	
+	
+	$("div.personaje").click(function(){
+	$("#personajes").animate({ left:"-1000px"},1000);
+	
+	
+})
+	$(".personaje").click(function(){
+		 
+		  
+		 setTimeout("$('#telon').animate({ top:'0px'},3000);",1000)
+		 setTimeout("$('#oscuro').fadeIn(2000);",4000)
+		 $('#mostrar_video').attr('src',$(this).attr('video'))
+		 
+		 $("#telon").fadeIn(1000);
+		})
+		
+		
+   $("#volver").click(function(){
+	   
+	  setTimeout("$('#oscuro').fadeOut(2000);",2000) 
+	  setTimeout("$('#telon').animate({ top:'-500px'},3000);",1000)
+	  
+	  setTimeout("$('#video').html('')",1000)
+	  
+	  setTimeout("$('#personajes').animate({ left:'0px'},4000)",3000);
+	    
+	   })		
+	
+		
+	})
+
+	
+ 
+</script>
+
+
+<body>
+
+<div id="contenedor" >
+    <div id="personajes">
+     
+     <div style="width:1000px; height:763px; float:left">
+     
+      <div class="personaje"  video="http://www.youtube.com/v/ZHEs71YDL9U?rel=0&autoplay=1">
+      <div class="spartacus text_personajes">Spartacus</div>
+      </div>
+      
+      <div class="personaje" video="http://www.youtube.com/v/0opI_KHhD2Q?rel=0&autoplay=1">
+      <div class="doctore text_personajes">Doctore</div>
+      </div>
+      
+      <div class="personaje 
+      " video="http://www.youtube.com/v/1vDAF3MHI0w?rel=0&autoplay=1">
+      <div class="lucretia text_personajes">Lucrecia</div>
+      </div>
+      
+      <div class="personaje"  video="http://www.youtube.com/v/I9h3eBP7qgg?rel=0&autoplay=1">
+      <div class="batiatus text_personajes">Batiacus</div>
+      </div>
+      
+   </div> 
+   <div style="width:1000px; height:763px; float:left" id="arena">
+   <div id="oscuro"></div>
+   <img src="images/telon-rojo-nuevo.png" id="telon" style="width:1000px; position:absolute; top:-500px; z-index:1"   />
+    
+   <img src="images/img-butacas.png" id="butacas" width="1000" style="position:absolute; top:500px; z-index:2"   />
+   <div class="btn_volver"><a href="javascript:void(0)" id="volver">Volver</a></div>
+   <div id="video">
+   <iframe frameborder="0" id="mostrar_video" width="454" height="281" marginheight="0" marginwidth="0" scrolling="no" ></iframe>
+   </div>
+   
+   </div> 
+    </div>
+</div>
+</div>
+
+</body>
+</html>
